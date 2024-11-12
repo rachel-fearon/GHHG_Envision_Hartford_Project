@@ -21,6 +21,7 @@
 		31B54D7A2CDB3D26003D136E /* MyopiaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B54D792CDB3D22003D136E /* MyopiaInfo.swift */; };
 		31B54D802CE048AA003D136E /* EyeFactDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B54D7F2CE048A6003D136E /* EyeFactDaily.swift */; };
 		31B54D822CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B54D812CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift */; };
+		31B54D932CE2DED2003D136E /* browneye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B54D922CE2DECE003D136E /* browneye.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		31B54D792CDB3D22003D136E /* MyopiaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyopiaInfo.swift; sourceTree = "<group>"; };
 		31B54D7F2CE048A6003D136E /* EyeFactDaily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeFactDaily.swift; sourceTree = "<group>"; };
 		31B54D812CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHHG_Envision_Hartford_DraftApp.swift; sourceTree = "<group>"; };
+		31B54D922CE2DECE003D136E /* browneye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browneye.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				31B54D812CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift */,
 				317740622C8B5BC2001C6096 /* ContentView.swift */,
 				317740642C8B5BC4001C6096 /* Assets.xcassets */,
+				31B54D922CE2DECE003D136E /* browneye.swift */,
 				31B54D732CDB113C003D136E /* eyeimage.swift */,
 				31B54D752CDB334F003D136E /* myopia.swift */,
 				317740662C8B5BC4001C6096 /* Preview Content */,
@@ -284,6 +287,7 @@
 				31B54D702CD82D6E003D136E /* VisionCare.swift in Sources */,
 				31B54D742CDB1147003D136E /* eyeimage.swift in Sources */,
 				31B54D722CD82E09003D136E /* HartfordEyecareProvider.swift in Sources */,
+				31B54D932CE2DED2003D136E /* browneye.swift in Sources */,
 				31B54D7A2CDB3D26003D136E /* MyopiaInfo.swift in Sources */,
 				31B54D802CE048AA003D136E /* EyeFactDaily.swift in Sources */,
 				31B54D822CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift in Sources */,
