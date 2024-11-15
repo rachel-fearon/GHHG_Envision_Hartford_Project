@@ -34,3 +34,9 @@ struct HealthEducation: View {
 
         }
     }
+
+struct HealthEducation_Previews: PreviewProvider {
+    static var previews: some View {
+        HealthEducation()
+    }
+}

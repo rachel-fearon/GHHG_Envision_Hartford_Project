@@ -41,7 +41,7 @@ struct EyeFactDaily: View {
                     .padding(.bottom, 5)
                 
                 Text(todayFact)
-                    .font(.custom("Avenir Next", size: 10))
+                    .font(.custom("Avenir Next", size: 30))
                     .multilineTextAlignment(.center)
                     .padding()
                     .background(

@@ -41,9 +41,9 @@ struct VisionCare: View {
         ZStack{
             LinearGradient(
                 gradient: Gradient(colors:[
-                    Color(red:226/255, green:211/255, blue:107/255),
-                    Color(red:209/255, green:194/255, blue:99/255),
-                    Color(red:209/255, green:99/255, blue:114/255)
+                    Color(.white),
+                    Color(.white),
+                    Color(.white)
                 ]),
                 startPoint: .top,
                 endPoint: .bottom
@@ -53,7 +53,7 @@ struct VisionCare: View {
             VStack {
                 Text("Vision Care and Finanical Assistance Programs")
                     .font(.custom("Avenir Next",size:24))
-                    .foregroundColor(.white)
+                    .foregroundColor(.red)
                     .padding()
                 
                 VStack(alignment: .leading, spacing:10){

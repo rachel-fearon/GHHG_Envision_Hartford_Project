@@ -9,59 +9,106 @@ import SwiftUI
 
 // HOME PAGE
 struct ContentView: View {
+    
+    @State private var showBanner = true
+    
+    let facts = [
+        "A blink lasts 1/10th of a second",
+        "Brown is the most common eye color",
+        "Staring at a computer can tire your eyes",
+        "Most vision problems are curable or avoidable",
+        "Shark eyes are sometimes used for human surgeries",
+        "Eyes detect 36,000 pieces of info an hour",
+        "Scientists don't know why we cry when upset",
+        "There is such thing as the perfect amount of eye contact",
+        "You can only see 1/6th of your eye",
+        "The eye has blind spots",
+        "Eyes are our second most complex organ"
+    ]
+    
+    // Computed property to get today's word
+    var todayFact: String {
+        let calendar = Calendar.current
+        let dayOfYear = calendar.ordinality(of: .day, in: .year, for: Date()) ?? 1
+        return facts[(dayOfYear - 1) % facts.count] // Ensure index is within bounds
+    }
+    
     var body: some View {
+        
         ZStack{
             LinearGradient(
                 gradient: Gradient(colors:[
                     Color(.white),
                     Color(.white),
-                    Color(red:209/255, green:99/255, blue:114/255)
+                    Color(.white),
+                    Color(red:196/255, green: 73/255, blue:0/255)
                 ]),
                 startPoint: .top,
                 endPoint: .bottom
             )
+            .ignoresSafeArea()
+            
             VStack{
-                HStack{
-                    VStack(alignment: .leading) {
-                        Spacer().frame(height: 40)
-                        Text("Welcome!")
-                            .font(.custom("Avenir Next", size:24))
-                            .multilineTextAlignment(.leading)
-                            .foregroundStyle(Color(red: 90/255, green: 167/255, blue: 167/255))
-                        
-                        Image("browneye")
-                            .clipShape(Circle())
-                            .overlay {
-                                Circle().stroke(.white, lineWidth: 4)
-                            }
-                            .shadow(radius: 7)
-                        
-                        Text("Envision Hartford")
-                            .font(.custom("Avenir Next", size:24))
-                            .multilineTextAlignment(.center)
-                            .foregroundStyle(Color(red: 90/255, green: 167/255, blue: 167/255))
-                        
-                    }
-                    .padding(.leading, 20)
-                    
-                    Spacer()
-                    
-                    VStack(alignment: .trailing) {
-                        Spacer().frame(height: 40)
-                        NavigationLink(destination: EyeFactDaily()) {
-                            Text("Eye Fact of the Day")
-                                .font(.custom("Avenir Next", size: 18))
-                                .padding()
-                                .background(Color(red: 108/255, green: 140/255, blue: 191/255))
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                    }
-                    .padding(.trailing,20)
-                }
-                .frame(maxWidth: .infinity)
                 
-                Spacer()
+                if showBanner {
+                    VStack {
+                        HStack {
+                            Text("Eye Fact of the Day 👁️")
+                                .font(.custom("Avenir Next", size: 16))
+                                .foregroundColor(.white)
+                                .padding()
+                            Text(todayFact)
+                                .font(.custom("Avenir Next", size: 16))
+                                .foregroundColor(.white)
+                                .padding()
+                            
+                            Spacer()
+                            
+                            // Close Button
+                            Button(action: {
+                                withAnimation {
+                                    showBanner = false // Hide the banner
+                                }
+                            }) {
+                                Image(systemName: "xmark")
+                                    .foregroundColor(.white)
+                                    .padding(.trailing, 10)
+                            }
+                        }
+                        .background(Color(red: 239/255, green: 214/255, blue: 172/255))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                        .padding(.horizontal)
+                        .padding(.top, 20) // Add some spacing from the top
+                    }
+                    .transition(.move(edge: .top).combined(with: .opacity)) // Smooth animation
+                }
+                
+                VStack{
+                    Spacer().frame(height: 40)
+                    
+                    Text("Welcome!")
+                        .font(.custom("Avenir Next", size:24))
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(Color(red:67/255, green: 37/255, blue:52/255))
+                    
+                    Image("browneye")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 120, height: 120)
+                        .clipShape(Circle())
+                        .overlay {
+                            Circle().stroke(.white, lineWidth: 4)
+                        }
+                        .shadow(radius: 7)
+                    
+                    Text("Envision Hartford")
+                        .font(.custom("Avenir Next", size:24))
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(Color(red:67/255, green: 37/255, blue:52/255))
+                    
+                    Spacer().frame(height: 50)
+                }
                 
                 VStack(spacing: 10) {
                     
@@ -69,7 +116,8 @@ struct ContentView: View {
                         Text("Health Education")
                             .font(.custom("Avenir Next", size:20))
                             .padding()
-                            .background(Color(red: 150/255, green: 215/255, blue: 198/255))
+                            .frame(maxWidth: .infinity)
+                            .background(Color(red: 24/255, green: 58/255, blue: 55/255))
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -78,7 +126,8 @@ struct ContentView: View {
                         Text("Vision Care & Financial Assistance Programs")
                             .font(.custom("Avenir Next", size:20))
                             .padding()
-                            .background(Color.purple)
+                            .frame(maxWidth: .infinity)
+                            .background(Color(red: 24/255, green: 58/255, blue: 55/255))
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -87,23 +136,25 @@ struct ContentView: View {
                         Text("Hartford Eyecare Provider")
                             .font(.custom("Avenir Next", size:20))
                             .padding()
-                            .background(Color.blue)
+                            .frame(maxWidth: .infinity)
+                            .background(Color(red: 24/255, green: 58/255, blue: 55/255))
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
                 }
                 .padding(.bottom, 20)
-                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(maxWidth:300)
+                
+                Spacer().frame(height:20)
             }
-            .padding()
-        }
-            .edgesIgnoringSafeArea(.all)
+            .padding(.top, 30)
         }
     }
-    
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView { // Wrap in NavigationView for preview
+        NavigationView {
             ContentView()
         }
     }

@@ -20,3 +20,9 @@ struct HartfordEyecareProvider: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
+struct HartfordEyecareProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        HartfordEyecareProvider()
+    }
+}
