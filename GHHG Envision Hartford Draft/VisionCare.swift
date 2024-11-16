@@ -15,24 +15,44 @@ struct ProgramEntry: View {
 
     
     var body: some View {
-        Link(destination: URL(string: url)!) {
-            HStack {
-                Image(systemName: iconName)
-                    .font(.title)
-                    .foregroundColor(Color(red: 108/255, green: 140/255, blue: 191/255))
-                    .padding(.trailing, 10)
-                VStack(alignment: .leading) {
+        Button(action: {
+            if let url = URL(string: url) {
+                UIApplication.shared.open(url)
+            }
+        }) {
+            HStack(alignment: .top, spacing:15) {
+                VStack {
+                    Spacer()
+                    Image(systemName: iconName)
+                        .font(.title)
+                        .foregroundColor(Color(red:24/255, green: 58/255, blue:55/255))
+                    Spacer()
+                }
+                
+                VStack(alignment: .leading, spacing: 5) {
                     Text(title)
                         .font(.custom("Avenir Next", size:20))
-                        .foregroundColor((Color(red:108/255, green:140/255, blue:191/255)))
-                    
+                        .foregroundColor((Color(red:24/255, green: 58/255, blue:55/255)))
+                        .truncationMode(.tail)
                     Text(description)
-                        .font(.custom("Avenir Next", size:18))
-                        .foregroundColor(.white)
+                        .font(.custom("Avenir Next", size:15))
+                        .foregroundColor(Color(.black))
+                        .truncationMode(.tail)
                 }
+                .padding(.vertical,5)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(.horizontal)
+            .frame(maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(15)
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color(red:67/255, green: 37/255, blue:52/255))
+            )
+            //.shadow(radius: 2)
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }
 
@@ -41,7 +61,7 @@ struct VisionCare: View {
         ZStack{
             LinearGradient(
                 gradient: Gradient(colors:[
-                    Color(.white),
+                    Color(red:239/255, green: 214/255, blue:172/255),
                     Color(.white),
                     Color(.white)
                 ]),
@@ -50,36 +70,40 @@ struct VisionCare: View {
             )
             .ignoresSafeArea()
             
-            VStack {
-                Text("Vision Care and Finanical Assistance Programs")
-                    .font(.custom("Avenir Next",size:24))
-                    .foregroundColor(.red)
+            ScrollView {
+                VStack {
+                    Text("Vision Care & Finanical Assistance Programs")
+                        .font(.custom("Avenir Next",size:24))
+                        .foregroundColor(Color(red:67/255, green: 37/255, blue:52/255))
+                        .padding()
+                        .multilineTextAlignment(.center)
+                    
+                    VStack(alignment: .leading, spacing:15){
+                        ProgramEntry(title: "InfantSEE", description: "Free eyecare exam for infants between 6 - 12 months", url: "https://www.infantsee.org", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "Lions Club International", description: "Financial assistance for affording eye exams/visits", url: "https://www.lionsclubs.org/en/start-our-global-impact/lions-eye-health-programs", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "New Eyes", description: "Prescription eyeglasses for those in need", url: "https://www.new-eyes.org", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "Mission Cataract USA", description: "Free cataract surgery", url: "https://missioncataractusa.org", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "Operation Sight", description: "Supports low-income patients to get cataract surgery", url: "https://operationsight.org", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "American Glaucoma Society", description: "Supports low-income patients and patients without insurance to get glaucoma surgery", url: "https://www.americanglaucomasociety.net", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "National Federation of the Blind", description: "Free white cane", url: "https://nfb.org", iconName: "eyeglasses")
+                        
+                        ProgramEntry(title: "Vision to Learn", description: "Hartford in-school free eye exams", url: "https://www.visiontolearn.org", iconName: "eyeglasses")
+                    }
                     .padding()
-                
-                VStack(alignment: .leading, spacing:10){
-                    ProgramEntry(title: "InfantSEE", description: "Free eyecare exam for infants between 6 - 12 months", url: "https://www.infantsee.org", iconName: "eyeglasses")
-                    
-                    ProgramEntry(title: "Lions Club International", description: "Financial assistance for affording eye exams/visits", url: "https://www.lionsclubs.org/en/start-our-global-impact/lions-eye-health-programs", iconName: "lion")
-                    
-                    ProgramEntry(title: "New Eyes", description: "Prescription eyeglasses for those in need", url: "https://www.new-eyes.org", iconName: "eyeglasses")
-                    
-                    ProgramEntry(title: "Mission Cataract USA", description: "Free cataract surgery", url: "https://missioncataractusa.org", iconName: "circle.righthalf.fill")
-                    
-                    ProgramEntry(title: "Operation Sight", description: "Supports low-income patients to get cataract surgery", url: "https://operationsight.org", iconName: "suit.heart.fill")
-                    
-                    ProgramEntry(title: "American Glaucoma Society", description: "Supports low-income patients and patients without insurance to get glaucoma surgery", url: "https://www.americanglaucomasociety.net", iconName: "eye")
-                    
-                    ProgramEntry(title: "National Federation of the Blind", description: "Free white cane", url: "https://nfb.org", iconName: "circle.grid.2x2.fill")
-                    
-                    ProgramEntry(title: "Vision to Learn", description: "Hartford in-school free eye exams", url: "https://www.visiontolearn.org", iconName: "school")
                 }
-                .padding()
             }
+            .navigationTitle("VisionCare")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("VisionCare")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
+
 struct VisionCare_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
