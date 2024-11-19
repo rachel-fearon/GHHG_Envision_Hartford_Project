@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312A7D4C2CE95539001E5DD7 /* myopia2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D4B2CE95533001E5DD7 /* myopia2.swift */; };
+		312A7D502CE95684001E5DD7 /* astigmatism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D4F2CE95681001E5DD7 /* astigmatism.swift */; };
+		312A7D522CE956AE001E5DD7 /* astigmatism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D512CE956AB001E5DD7 /* astigmatism2.swift */; };
+		312A7D542CE95DB6001E5DD7 /* amblyopia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D532CE95DB3001E5DD7 /* amblyopia.swift */; };
+		312A7D562CEAE3E0001E5DD7 /* amblyopia2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D552CEAE3DD001E5DD7 /* amblyopia2.swift */; };
+		312A7D582CEBDE04001E5DD7 /* vt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D572CEBDDDB001E5DD7 /* vt.swift */; };
+		312A7D5A2CEBDEF1001E5DD7 /* vt2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D592CEBDEEF001E5DD7 /* vt2.swift */; };
+		312A7D5C2CEBE2DE001E5DD7 /* MyopiaInfo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D5B2CEBE2D8001E5DD7 /* MyopiaInfo2.swift */; };
+		312A7D5E2CEBE405001E5DD7 /* AmblyopiaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D5D2CEBE3F6001E5DD7 /* AmblyopiaInfo.swift */; };
+		312A7D602CEBE43F001E5DD7 /* AmblyopiaInfo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D5F2CEBE43A001E5DD7 /* AmblyopiaInfo2.swift */; };
+		312A7D622CEBE46A001E5DD7 /* AstigmatismInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D612CEBE464001E5DD7 /* AstigmatismInfo.swift */; };
+		312A7D642CEBE4A4001E5DD7 /* AstigmatismInfo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D632CEBE4A0001E5DD7 /* AstigmatismInfo2.swift */; };
+		312A7D662CEBE4D1001E5DD7 /* VTInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D652CEBE4CC001E5DD7 /* VTInfo.swift */; };
+		312A7D682CEBE4FA001E5DD7 /* VTInfo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A7D672CEBE4F0001E5DD7 /* VTInfo2.swift */; };
 		317740632C8B5BC2001C6096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317740622C8B5BC2001C6096 /* ContentView.swift */; };
 		317740652C8B5BC4001C6096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317740642C8B5BC4001C6096 /* Assets.xcassets */; };
 		317740682C8B5BC4001C6096 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317740672C8B5BC4001C6096 /* Preview Assets.xcassets */; };
@@ -42,6 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312A7D4B2CE95533001E5DD7 /* myopia2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myopia2.swift; sourceTree = "<group>"; };
+		312A7D4F2CE95681001E5DD7 /* astigmatism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astigmatism.swift; sourceTree = "<group>"; };
+		312A7D512CE956AB001E5DD7 /* astigmatism2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astigmatism2.swift; sourceTree = "<group>"; };
+		312A7D532CE95DB3001E5DD7 /* amblyopia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amblyopia.swift; sourceTree = "<group>"; };
+		312A7D552CEAE3DD001E5DD7 /* amblyopia2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amblyopia2.swift; sourceTree = "<group>"; };
+		312A7D572CEBDDDB001E5DD7 /* vt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vt.swift; sourceTree = "<group>"; };
+		312A7D592CEBDEEF001E5DD7 /* vt2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vt2.swift; sourceTree = "<group>"; };
+		312A7D5B2CEBE2D8001E5DD7 /* MyopiaInfo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyopiaInfo2.swift; sourceTree = "<group>"; };
+		312A7D5D2CEBE3F6001E5DD7 /* AmblyopiaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmblyopiaInfo.swift; sourceTree = "<group>"; };
+		312A7D5F2CEBE43A001E5DD7 /* AmblyopiaInfo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmblyopiaInfo2.swift; sourceTree = "<group>"; };
+		312A7D612CEBE464001E5DD7 /* AstigmatismInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstigmatismInfo.swift; sourceTree = "<group>"; };
+		312A7D632CEBE4A0001E5DD7 /* AstigmatismInfo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstigmatismInfo2.swift; sourceTree = "<group>"; };
+		312A7D652CEBE4CC001E5DD7 /* VTInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTInfo.swift; sourceTree = "<group>"; };
+		312A7D672CEBE4F0001E5DD7 /* VTInfo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTInfo2.swift; sourceTree = "<group>"; };
 		3177405D2C8B5BC2001C6096 /* GHHG Envision Hartford Draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GHHG Envision Hartford Draft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		317740622C8B5BC2001C6096 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		317740642C8B5BC4001C6096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,13 +142,27 @@
 				31B54D7F2CE048A6003D136E /* EyeFactDaily.swift */,
 				31B54D6F2CD82D68003D136E /* VisionCare.swift */,
 				31B54D6D2CD824F6003D136E /* HealthEducation.swift */,
-				31B54D792CDB3D22003D136E /* MyopiaInfo.swift */,
 				31B54D812CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift */,
 				317740622C8B5BC2001C6096 /* ContentView.swift */,
 				317740642C8B5BC4001C6096 /* Assets.xcassets */,
+				312A7D672CEBE4F0001E5DD7 /* VTInfo2.swift */,
+				312A7D592CEBDEEF001E5DD7 /* vt2.swift */,
+				312A7D572CEBDDDB001E5DD7 /* vt.swift */,
+				312A7D652CEBE4CC001E5DD7 /* VTInfo.swift */,
+				312A7D5F2CEBE43A001E5DD7 /* AmblyopiaInfo2.swift */,
+				312A7D552CEAE3DD001E5DD7 /* amblyopia2.swift */,
+				312A7D5D2CEBE3F6001E5DD7 /* AmblyopiaInfo.swift */,
+				312A7D532CE95DB3001E5DD7 /* amblyopia.swift */,
+				312A7D632CEBE4A0001E5DD7 /* AstigmatismInfo2.swift */,
+				312A7D512CE956AB001E5DD7 /* astigmatism2.swift */,
+				312A7D612CEBE464001E5DD7 /* AstigmatismInfo.swift */,
+				312A7D4F2CE95681001E5DD7 /* astigmatism.swift */,
+				312A7D5B2CEBE2D8001E5DD7 /* MyopiaInfo2.swift */,
+				312A7D4B2CE95533001E5DD7 /* myopia2.swift */,
+				31B54D792CDB3D22003D136E /* MyopiaInfo.swift */,
+				31B54D752CDB334F003D136E /* myopia.swift */,
 				31B54D922CE2DECE003D136E /* browneye.swift */,
 				31B54D732CDB113C003D136E /* eyeimage.swift */,
-				31B54D752CDB334F003D136E /* myopia.swift */,
 				317740662C8B5BC4001C6096 /* Preview Content */,
 			);
 			path = "GHHG Envision Hartford Draft";
@@ -282,13 +324,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				317740632C8B5BC2001C6096 /* ContentView.swift in Sources */,
+				312A7D522CE956AE001E5DD7 /* astigmatism2.swift in Sources */,
+				312A7D542CE95DB6001E5DD7 /* amblyopia.swift in Sources */,
+				312A7D602CEBE43F001E5DD7 /* AmblyopiaInfo2.swift in Sources */,
 				31B54D6E2CD82502003D136E /* HealthEducation.swift in Sources */,
 				31B54D762CDB3354003D136E /* myopia.swift in Sources */,
+				312A7D622CEBE46A001E5DD7 /* AstigmatismInfo.swift in Sources */,
+				312A7D5C2CEBE2DE001E5DD7 /* MyopiaInfo2.swift in Sources */,
 				31B54D702CD82D6E003D136E /* VisionCare.swift in Sources */,
+				312A7D562CEAE3E0001E5DD7 /* amblyopia2.swift in Sources */,
+				312A7D4C2CE95539001E5DD7 /* myopia2.swift in Sources */,
+				312A7D5E2CEBE405001E5DD7 /* AmblyopiaInfo.swift in Sources */,
 				31B54D742CDB1147003D136E /* eyeimage.swift in Sources */,
 				31B54D722CD82E09003D136E /* HartfordEyecareProvider.swift in Sources */,
+				312A7D502CE95684001E5DD7 /* astigmatism.swift in Sources */,
 				31B54D932CE2DED2003D136E /* browneye.swift in Sources */,
+				312A7D682CEBE4FA001E5DD7 /* VTInfo2.swift in Sources */,
+				312A7D642CEBE4A4001E5DD7 /* AstigmatismInfo2.swift in Sources */,
 				31B54D7A2CDB3D26003D136E /* MyopiaInfo.swift in Sources */,
+				312A7D5A2CEBDEF1001E5DD7 /* vt2.swift in Sources */,
+				312A7D662CEBE4D1001E5DD7 /* VTInfo.swift in Sources */,
+				312A7D582CEBDE04001E5DD7 /* vt.swift in Sources */,
 				31B54D802CE048AA003D136E /* EyeFactDaily.swift in Sources */,
 				31B54D822CE064D4003D136E /* GHHG_Envision_Hartford_DraftApp.swift in Sources */,
 			);
