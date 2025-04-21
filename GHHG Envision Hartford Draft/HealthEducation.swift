@@ -32,36 +32,39 @@ struct HealthTopic: View {
                 HStack(spacing: 16) {
                     ForEach(items) { item in
                         NavigationLink(destination: item.destination) {
-                            VStack(spacing: 0) {
+                            ZStack {
                                 Image(item.imageName)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 300, height: 300)
-                                    .clipShape(
-                                        RoundedRectangle(cornerRadius: 10)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 300, height: 300)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(Color.white, lineWidth: 2)
                                     )
-                                    .overlay {
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.white, lineWidth: 2)
-                                    }
+                                LinearGradient(
+                                        gradient: Gradient(colors: [Color.black.opacity(0.3), Color.clear]),
+                                        startPoint: .bottom,
+                                        endPoint: .top
+                                )
+                                   .clipShape(RoundedRectangle(cornerRadius: 10))
                                 Text(item.title)
-                                    .font(.caption)
-                                        .multilineTextAlignment(.center)
-                                        .padding(.vertical, 6)
-                                        .padding(.horizontal, 12)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 8)
-                                                .fill(Color(red: 67 / 255, green: 37 / 255, blue: 52 / 255))
-                                        )
-                                        .foregroundColor(.white)
-                                        .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
+                                    .font(.system(size: 25, weight: .semibold))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.vertical, 6)
+                                    .padding(.horizontal, 12)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .fill(Color(red:24/255, green: 58/255, blue:55/255))
+                                    )
+                                    .foregroundColor(.white)
+                            }
+                            .frame(width: 300, height: 300)
                             }
                         }
                     }
                 }
             }
-        }
-        .padding(.horizontal)
     }
 }
 
