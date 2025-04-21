@@ -9,13 +9,26 @@ import SwiftUI
 
 struct AmblyopiaInfo2: View {
     var body: some View {
-        VStack {
-            Text("title")
-                .font(.largeTitle)
-                .padding()
-
-            Text("text")
-                .padding()
+        ZStack{
+            LinearGradient(
+                gradient: Gradient(colors:[
+                    Color(.white),
+                    Color(.white),
+                    Color(.white),
+                    Color(red:24/255, green: 58/255, blue:55/255)
+                ]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+            VStack {
+                Text("title")
+                    .font(.largeTitle)
+                    .padding()
+                
+                Text("text")
+                    .padding()
+            }
         }
         .navigationTitle("Amblyopia Information")
         .navigationBarTitleDisplayMode(.inline)

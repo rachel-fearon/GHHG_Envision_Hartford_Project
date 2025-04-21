@@ -26,25 +26,35 @@ struct HealthTopic: View {
                 .font(.custom("Avenir Next", size: 24))
                 .foregroundColor(Color(red: 67 / 255, green: 37 / 255, blue: 52 / 255))
                 .padding(.top)
+                .frame(maxWidth: .infinity)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(items) { item in
                         NavigationLink(destination: item.destination) {
-                            VStack {
+                            VStack(spacing: 0) {
                                 Image(item.imageName)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 120, height: 120)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .frame(width: 300, height: 300)
+                                    .clipShape(
+                                        RoundedRectangle(cornerRadius: 10)
+                                    )
                                     .overlay {
                                         RoundedRectangle(cornerRadius: 10)
                                             .stroke(Color.white, lineWidth: 2)
                                     }
                                 Text(item.title)
                                     .font(.caption)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(.primary)
+                                        .multilineTextAlignment(.center)
+                                        .padding(.vertical, 6)
+                                        .padding(.horizontal, 12)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .fill(Color(red: 67 / 255, green: 37 / 255, blue: 52 / 255))
+                                        )
+                                        .foregroundColor(.white)
+                                        .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
                             }
                         }
                     }
@@ -79,24 +89,41 @@ struct HealthEducation: View {
     ]
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    Spacer().frame(height: 20)
+            NavigationView {
+                ZStack{
+                    LinearGradient(
+                        gradient: Gradient(colors:[
+                            Color(red:24/255, green: 58/255, blue:55/255),
+                            Color(.white),
+                            Color(.white),
+                            Color(.white)
+                        ]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .ignoresSafeArea()
                     
-                    Text("Health Education")
-                        .font(.custom("Avenir Next", size: 32))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 67 / 255, green: 37 / 255, blue: 52 / 255))
-                        .padding(.bottom)
                     
-                    // Each topic section
-                    HealthTopic(title: "Myopia", items: myopiaItems)
-                    HealthTopic(title: "Astigmatism", items: astigmatismItems)
-                    HealthTopic(title: "Amblyopia", items: amblyopiaItems)
-                    HealthTopic(title: "Vision Therapy", items: vtItems)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Spacer().frame(height: 20)
+                        
+                        Text("Health Education")
+                            .font(.custom("Avenir Next", size: 32))
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(Color(red: 67 / 255, green: 37 / 255, blue: 52 / 255))
+                            .padding(.bottom, 10)
+                        
+                        HealthTopic(title: "Myopia", items: myopiaItems)
+                        Spacer().frame(height:5)
+                        HealthTopic(title: "Astigmatism", items: astigmatismItems)
+                        HealthTopic(title: "Amblyopia", items: amblyopiaItems)
+                        HealthTopic(title: "Vision Therapy", items: vtItems)
+                    }
+                    .padding(.bottom)
                 }
-                .padding(.bottom)
             }
             .navigationTitle("Health Education")
             .navigationBarTitleDisplayMode(.inline)
