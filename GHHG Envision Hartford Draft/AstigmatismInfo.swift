@@ -26,7 +26,7 @@ struct AstigmatismInfo: View {
                     .font(.custom("Avenir Next", size:30))
                     .padding()
                 
-                Text("Astigmatism is the unequal curvature of the surface of the eye. Typically, the eye is shaped like a soccer ball. When light hits the surface, it refracts (bends) onto an eye that has the same curvature on both refractive surfaces - the cornea and the lens. An eyeball with an astigmatism has a cornea and lens with differing curvatures, causing the eye to be shaped more like a football. This causes blurring because the light rays are not being bent at the same angle.")
+                Text("Astigmatism is happens when the surface of the eye is not curved evenly. Normally, the eye is shaped like a soccer ball. When light hits the surface, it bends (refracts) onto an eye that has the same curvature on the cornea and the lens. An eyeball with an astigmatism has a cornea and lens with different curves, causing the eye to be shaped more like a football. This causes blurring because the light rays are not being bent the same way.")
                     .font(.custom("Avenir Next", size:20))
                     .padding()
             }

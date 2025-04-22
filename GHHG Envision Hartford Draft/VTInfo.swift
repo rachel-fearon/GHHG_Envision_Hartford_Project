@@ -31,11 +31,11 @@ struct VTInfo: View {
                     .font(.custom("Avenir Next", size:18))
                     .padding()
                 
-                Text("Vision is the ability to interpret and understand visual input. In other words, vision is a learned skill that allows us to integrate sensory and motor information to help us navigate the world.")
+                Text("Vision is the ability to interpret and understand visual input. In other words, vision is a learned skill that allows us to use what we see and feel, and how we move to understand the world around us.")
                     .font(.custom("Avenir Next", size:18))
                     .padding()
                 
-                Text("Vision therapy or rehabilitation treats disorders related to ocular muscles, ocular motor, binocular, and visual perceptual skills. This is beneficial to a variety of populations including school-aged children, traumatic brain injury (TBI) patients, and low vision patients.")
+                Text("Vision therapy or rehab treats problems with the eye muscles, eye movement, how the eyes work together, and how the brain understands what we see. It can help many people, like school-aged children, traumatic brain injury (TBI) patients, and low vision patients.")
                     .font(.custom("Avenir Next", size:18))
                     .padding()
             }

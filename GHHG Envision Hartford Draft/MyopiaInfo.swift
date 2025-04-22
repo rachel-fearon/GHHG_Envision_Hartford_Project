@@ -26,7 +26,7 @@ struct MyopiaInfo: View {
                     .font(.custom("Avenir Next", size:30))
                     .padding()
                 
-                Text("Myopia, or near-sightedness, is an inability to see images clearly that are far away. Light rays travel through the front clear layers of the eye - the cornea and the lens. The light travels to the back of the eye, landing on the retina. The retina sends a signal from the eye to the brain, processing and integrating information to allow you to see. In near-sightedness (myopia), the image falls in front of the retina, meaning the light rays are out of focus. Consequently, the image you see is blurry.")
+                Text("Myopia, or near-sightedness, is an inability to see images clearly that are far away. Light rays travel through the front clear layers of the eye - the cornea and the lens. The light travels to the back of the eye, landing on the retina. The retina sends a signal from the eye to the brain, which allows you to see. In near-sightedness (myopia), the image falls in front of the retina, meaning the light rays are not focused properly. This makes things look blurry.")
                     .font(.custom("Avenir Next", size:18))
                     .padding()
             }
